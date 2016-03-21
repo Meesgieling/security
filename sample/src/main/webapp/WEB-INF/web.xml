@@ -19,9 +19,49 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
 
-
+    <servlet>
+    	<servlet-name>SecretServlet</servlet-name>
+    	<servlet-class>servlets.SecretServlet</servlet-class>
+    </servlet>
+    <servlet>
+    	<servlet-name>VerySecretServlet</servlet-name>
+    	<servlet-class>servlets.VerySecretServlet</servlet-class>
+    </servlet>
+    <servlet>
+    	<servlet-name>TopSecretServlet</servlet-name>
+    	<servlet-class>servlets.TopSecretServlet</servlet-class>
+    </servlet>
+    <servlet>
+    	<servlet-name>TopSecretMailServlet</servlet-name>
+    	<servlet-class>servlets.TopSecretMailServlet</servlet-class>
+    </servlet>
+    <servlet>
+    	<servlet-name>SecretMailServlet</servlet-name>
+    	<servlet-class>servlets.SecretMailServlet</servlet-class>
+    </servlet>
+	<servlet-mapping>
+        <servlet-name>SecretMailServlet</servlet-name>
+        <url-pattern>/SecretMailServlet.do</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>TopSecretMailServlet</servlet-name>
+        <url-pattern>/TopSecretMailServlet.do</url-pattern>
+    </servlet-mapping>
+	<servlet-mapping>
         <servlet-name>V2IAC1-14 Web Application</servlet-name>
         <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>SecretServlet</servlet-name>
+        <url-pattern>/SecretServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerySecretServlet</servlet-name>
+        <url-pattern>/VerySecretServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TopSecretServlet</servlet-name>
+        <url-pattern>/TopSecretServlet.do</url-pattern>
     </servlet-mapping>
 </web-app>
