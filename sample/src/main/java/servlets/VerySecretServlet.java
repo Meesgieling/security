@@ -12,7 +12,6 @@ public class VerySecretServlet extends HttpServlet {
 		response.setContentType("text/html");
 		String code = request.getParameter("code");
 		String mailcode = (String) getServletContext().getAttribute("mailcode");
-		System.out.println("code : " + mailcode);
 		
 		RequestDispatcher rd = null;
 		if(mailcode.equals(code))
